@@ -33,9 +33,9 @@
   <!-- Buttons to perform various actions -->
   <div id="buttonSection">
     <!-- Button for displaying images -->
-    <button data-action="displayImage" data-param="Rplot54.png">Show Image 1 (Spend 10 Beans)</button>
-    <button data-action="displayImage" data-param="Rplot55.png">Show Image 2 (Spend 10 Beans)</button>
-    <button data-action="displayImage" data-param="Rplot56.png">Show Image 3 (Spend 10 Beans)</button>
+    <button data-action="displayImage" data-param="Rplot64.png">Show Image 1 (Spend 10 Beans)</button>
+    <button data-action="displayImage" data-param="Rplot65.png">Show Image 2 (Spend 10 Beans)</button>
+    <button data-action="displayImage" data-param="Rplot66.png">Show Image 3 (Spend 10 Beans)</button>
 
     <!-- Button for playing sounds -->
     <button data-action="playSound" data-param="wlaugh.mp3">Play Sound 1 (Spend 10 Beans)</button>
@@ -55,6 +55,7 @@
 <script src="js/displayImages.js" type="module"></script>
 <script src="js/main.js" type="module"></script>
 
+
 <script type="module">
   // Function to start the game (hide rules and show game section)
   function startGame() {
@@ -67,6 +68,10 @@
     document.getElementById('rulesSection').style.display = 'block';
     document.getElementById('gameSection').style.display = 'none';
   }
+
+  // Attach event listeners to buttons
+  document.getElementById('startGameButton').addEventListener('click', startGame);
+  document.getElementById('goBackToRulesButton').addEventListener('click', goBackToRules);
 </script>
 
 </body>
