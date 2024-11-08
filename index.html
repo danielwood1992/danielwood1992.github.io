@@ -1,39 +1,74 @@
-<!DOCTYPE html>
-<!-- This is how you do a comment in html -->
-
+!<DOCTYPE html>
 <html lang="en">
-
-<!-- So this head section is used for adding info about the page 4etc., I guess -->
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image display</title>
+  <title>Bean Spending Game</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-
-<!-- So this body bit is for putting the visible content -->
-
 <body>
 
-<h1>Display Data from a Text File</h1>
+<!-- Rules Section -->
+<div id="rulesSection">
+  <h1>Welcome to the Bean Spending Game!</h1>
+  <p>In this game, you start with 50 beans. You can spend them to perform various actions, such as:</p>
+  <ul>
+    <li>Displaying images</li>
+    <li>Playing sounds</li>
+    <li>Triggering custom actions</li>
+  </ul>
 
-<!-- Display the number of beans left -->
-<p id="beanCounter">You have <span id="beanCount">50</span> beans left.</p>
+  <p>Each action costs 10 beans. Once you've run out of beans, you won't be able to perform any actions until you refresh the page.</p>
 
-<!-- div just divides things arbitrarily into sections -->
-<div id="buttonSection">
-	<button data-image="Rplot64.png">Show Image 1</button>
-	<button data-image="Rplot65.png">Show Image 2</button>
-	<button data-image="Rplot66.png">Show Image 3</button>
+  <!-- Button to start the game -->
+  <button onclick="startGame()">Start Playing</button>
 </div>
 
-<div id="output"></div> <!-- This is where the images will appear on the page -->
+<!-- Main Game Section (initially hidden) -->
+<div id="gameSection" style="display:none;">
+  <h1>Bean Spending Game</h1>
 
-<!-- So then it will execute the scripts here... -->
+  <p id="beanCounter">You have <span id="beanCount">50</span> beans left.</p>
 
+  <!-- Buttons to perform various actions -->
+  <div id="buttonSection">
+    <!-- Button for displaying images -->
+    <button data-action="displayImage" data-param="Rplot54.png">Show Image 1 (Spend 10 Beans)</button>
+    <button data-action="displayImage" data-param="Rplot55.png">Show Image 2 (Spend 10 Beans)</button>
+    <button data-action="displayImage" data-param="Rplot56.png">Show Image 3 (Spend 10 Beans)</button>
+
+    <!-- Button for playing sounds -->
+    <button data-action="playSound" data-param="sound1.mp3">Play Sound 1 (Spend 10 Beans)</button>
+
+    <!-- Custom action button -->
+    <button data-action="customAction" data-param="Beans are running out!">Show Custom Message (Spend 10 Beans)</button>
+  </div>
+
+  <!-- Area to display images and other content -->
+  <div id="output"></div>
+
+  <!-- Button to go back to the rules page -->
+  <button onclick="goBackToRules()">Back to Rules</button>
+</div>
+
+<script src="js/actions.js"></script>  <!-- Import actions for modularity -->
 <script src="js/displayImages.js"></script>
 <script src="js/main.js"></script>
 
+<script>
+  // Function to start the game (hide rules and show game section)
+  function startGame() {
+    document.getElementById('rulesSection').style.display = 'none';
+    document.getElementById('gameSection').style.display = 'block';
+  }
+
+  // Function to go back to the rules section
+  function goBackToRules() {
+    document.getElementById('rulesSection').style.display = 'block';
+    document.getElementById('gameSection').style.display = 'none';
+  }
+</script>
+
 </body>
 </html>
+

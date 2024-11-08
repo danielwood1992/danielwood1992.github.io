@@ -1,57 +1,50 @@
-//bean counting function
+import { actions } from './actions.js';
 
 let beans = 50;
 
-// Function to update the bean count displayed on the page
+// Update bean count displayed on page
 function updateBeanCount() {
-  const beanCountDisplay = document.getElementById('beanCount');  // Get the element showing bean count
-  beanCountDisplay.textContent = beans;  // Update the text content to the current number of beans
+  const beanCountDisplay = document.getElementById('beanCount');
+  beanCountDisplay.textContent = beans;
 }
 
-// Function to display the selected image and decrease beans
-function displayImage(imageFileName) {
-  const outputDiv = document.getElementById('output');  // Get the div to display the image
-  outputDiv.innerHTML = '';  // Clear any previously displayed content (if any)
-
-  // Create an <img> element to display the image
-  const img = document.createElement('img');
-  img.src = `images/${imageFileName}`;  // Set the source path to the image
-  img.alt = `Displaying ${imageFileName}`;  // Set the alt text for accessibility
-  img.classList.add('responsive-img');  // Add a CSS class to style the image
-
-  // Append the image to the output div
-  outputDiv.appendChild(img);
-
-  // Decrease the number of beans by 10
-  beans -= 10;
-
-  // Update the bean count displayed on the page
-  updateBeanCount();
-
-  // If no beans are left, disable all buttons
+// Spend beans on an action and trigger it
+function spendBeans(actionType, actionParam) {
   if (beans <= 0) {
-    disableButtons();
+    disableButtons();  // Disable buttons when out of beans
+    return;
+  }
+
+  if (actions[actionType]) {
+    actions[actionType](actionParam);
+    beans -= 10;
+    updateBeanCount();
+
+    if (beans <= 0) {
+      disableButtons();
+    }
+  } else {
+    console.error('Action type not found:', actionType);
   }
 }
 
-// Function to disable the buttons when there are no beans left
+// Disable all buttons when beans are depleted
 function disableButtons() {
-  const buttons = document.querySelectorAll('#buttonSection button');  // Get all buttons
-  buttons.forEach(button => {
-    button.disabled = true;  // Disable each button
-  });
+  const buttons = document.querySelectorAll('#buttonSection button');
+  buttons.forEach(button => button.disabled = true);
 }
 
-// Event listener for button clicks to trigger image display
+// Event listener for button clicks to trigger actions
 document.getElementById('buttonSection').addEventListener('click', function(event) {
-  const button = event.target;  // Get the clicked button
-  const imageFileName = button.getAttribute('data-image');  // Get the image filename from the button
+  const button = event.target;
+  const actionType = button.getAttribute('data-action');
+  const actionParam = button.getAttribute('data-param');
 
-  // Only proceed if the button has a valid image file associated with it
-  if (imageFileName) {
-    displayImage(imageFileName);  // Display the image and update the bean counter
+  if (actionType) {
+    spendBeans(actionType, actionParam);
   }
 });
 
 // Initial setup: Update bean count on page load
 updateBeanCount();
+
