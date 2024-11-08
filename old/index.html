@@ -20,20 +20,20 @@
 <script>
   // Function to fetch and display the data from 'data.txt'
   document.getElementById('dataButton').addEventListener('click', function() {
-  
-  document.getElementById('output').innterHTML = '';
-
-   //Create a new img element
-   const img document.createElement('img')
-   img.src = 'Rplot66.png'
-
-   //Set alt text for accessibility
-   img.alt = 'Displayed Image'
-
-  
-   // Append the image to the output div
-   document.getElementById('output').appendChild(img);
-
+    fetch('data.txt')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text();
+      })
+      .then(text => {
+        document.getElementById('output').textContent = text;
+      })
+      .catch(error => {
+        console.error('There has been a problem with your fetch operation:', error);
+        document.getElementById('output').textContent = 'Error loading data';
+      });
   });
 </script>
 
