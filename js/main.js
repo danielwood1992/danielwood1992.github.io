@@ -1,4 +1,3 @@
-//Fumction to start the game (hide rules and show game section)
 function startGame() {
   document.getElementById('rulesSection').style.display = 'none';
   document.getElementById('gameSection').style.display = 'block';
@@ -10,7 +9,18 @@ function goBackToRules() {
   document.getElementById('gameSection').style.display = 'none';
 }
 
-// Attach functions to the window object so they are accessible globally
-window.startGame = startGame;
-window.goBackToRules = goBackToRules;
+// Wait for the DOM to fully load before attaching event listeners
+document.addEventListener('DOMContentLoaded', function() {
+  // Attach the startGame function to the start button
+  const startButton = document.getElementById('startGameButton');
+  if (startButton) {
+    startButton.addEventListener('click', startGame);
+  }
+
+  // Attach the goBackToRules function to the back button
+  const backButton = document.getElementById('backToRulesButton');
+  if (backButton) {
+    backButton.addEventListener('click', goBackToRules);
+  }
+});
 
