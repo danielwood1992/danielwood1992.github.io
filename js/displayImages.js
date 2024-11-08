@@ -3,15 +3,15 @@
 function displayImage(imageFileName) {
 
 	
-	const outputDiv = document.getElementByID('output') //Get where the image will be displayed
+	const outputDiv = document.getElementById('output') //Get where the image will be displayed
 	// note const produces variables whose value cannot be reassigned once they are initialised
 	outputDiv.innerHTML = ''; //Clear any previously displayed content from the area
 
 	//Create an <img> element to display the image
 	const img = document.createElement('img');
 	//src stands for the source - so it's where a resource is being loaded from I guess
-	img.src = 'images/$imageFileName}' //Set the src of the image to the path of the image
-	img.alt = 'Displaying ${imageFileName}' //sets an alt text for accesibility
+	img.src = `images/$imageFileName}` //Set the src of the image to the path of the image
+	img.alt = `Displaying ${imageFileName}` //sets an alt text for accesibility
 	img.classList.add('responsive-img'); //adds CSS class to make the image responsive (adapts to different screen sizes)
 
 	//Append image to output div
