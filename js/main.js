@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
   updateBeanCount();
 
 function showMessage() {
-  consg messageArea = document.getElementById('messageArea');  // Get the element to display the message
+  const messageArea = document.getElementById('messageArea');  // Get the element to display the message
   messageArea.textContent = "Spend your money wisely...";  // Set the message text
 }
 
