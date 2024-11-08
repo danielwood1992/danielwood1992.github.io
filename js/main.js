@@ -27,5 +27,17 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   updateBeanCount();
+
+function showMessage() {
+  consg messageArea = document.getElementById('messageArea');  // Get the element to display the message
+  messageArea.textContent = "Spend your money wisely...";  // Set the message text
+}
+
+// Event listener for the "Show Message" button
+document.getElementById('showMessageButton').addEventListener('click', function() {
+  showMessage();  // Display the message when the button is clicked
 });
+
+
+
 

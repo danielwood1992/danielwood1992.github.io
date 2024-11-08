@@ -43,3 +43,15 @@ button {
   display: block;  /* Make the image a block element for centering */
   margin: 0 auto;  /* Center the image horizontally */
 }
+
+
+#messageArea {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
