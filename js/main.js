@@ -1,6 +1,18 @@
+//Initialise the number of beans
+beans = 1000000;  // Start with one million beans
+
+// Function to update the bean count display
+function updateBeanCount() {
+  document.getElementById('beanCount').textContent = beans;
+}
+
+// Function to start the game (hide rules and show game section)
 function startGame() {
   document.getElementById('rulesSection').style.display = 'none';
   document.getElementById('gameSection').style.display = 'block';
+
+  // Initialize the bean count display on game start
+  updateBeanCount();
 }
 
 // Function to go back to the rules section
@@ -22,5 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
   if (backButton) {
     backButton.addEventListener('click', goBackToRules);
   }
+
+  // Update bean count display on page load (just in case)
+  updateBeanCount();
 });
 

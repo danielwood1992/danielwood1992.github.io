@@ -10,35 +10,28 @@
 
 <!-- Rules Section -->
 <div id="rulesSection">
-  <h1>Welcome to the Bean Spending Game!</h1>
-  <p>In this game, you start with 50 beans. You can spend them to perform various actions, such as:</p>
-  <ul>
-    <li>Displaying images</li>
-    <li>Playing sounds</li>
-    <li>Triggering custom actions</li>
-  </ul>
-
-  <p>Each action costs 10 beans. Once you've run out of beans, you won't be able to perform any actions until you refresh the page.</p>
+  <h1>Find a solution to the ash killing parrot.</h1>
+  <p>We thought ash dieback and the emerald ash borer was bad. Now there is a new threat...the ash killing parrot (AKP)</p>
+  <p>You are a researcher starting with £1,000,000. You can perform various actions to try and investigate the phenomenon</p>
+  <p>Doing stuff costs money. Hopefully you will figure out a solution before all the ash is dead (again).</p>
 
   <!-- Button to start the game -->
-  <button id="startGameButton">Start Playing</button>
+  <button id="startGameButton">Start your research program</button>
 </div>
 
 <!-- Main Game Section (initially hidden) -->
 <div id="gameSection" style="display:none;">
   <h1>Bean Spending Game</h1>
 
-  <p id="beanCounter">You have <span id="beanCount">50</span> beans left.</p>
+  <p id="beanCounter">You have <span id="beanCount">1,000,000</span> pounds left.</p>
 
   <!-- Buttons to perform various actions -->
   <div id="buttonSection">
-    <button data-action="displayImage" data-param="Rplot54.png">Show Image 1 (Spend 10 Beans)</button>
-    <button data-action="displayImage" data-param="Rplot55.png">Show Image 2 (Spend 10 Beans)</button>
-    <button data-action="displayImage" data-param="Rplot56.png">Show Image 3 (Spend 10 Beans)</button>
+    <button data-action="displayImage" data-param="Rplot54.png">Investigate heritability (spend 10 pounds)</button>
+    <button data-action="displayImage" data-param="Rplot55.png">Peform a GWAS (spend ten pounds)</button>
+    <button data-action="displayImage" data-param="bird.jpg">Investigate the pathogen (spend 10 pounds)</button>
 
-    <button data-action="playSound" data-param="wlaugh.mp3">Play Sound 1 (Spend 10 Beans)</button>
-
-    <button data-action="customAction" data-param="Beans are running out!">Show Custom Message (Spend 10 Beans)</button>
+    <button data-action="customAction" data-param="Spend your money wisely...">Show a message from your team leader (Spend 10 pounds)</button>
   </div>
 
   <div id="output"></div>
