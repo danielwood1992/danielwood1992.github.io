@@ -1,5 +1,5 @@
 //Function to display an image
-function displayImage(imageFileName) {
+fuction displayImage(imageFileName) {
   const outputDiv = document.getElementById('output');
   outputDiv.innerHTML = '';  // Clear previous content
 
@@ -10,22 +10,10 @@ function displayImage(imageFileName) {
   outputDiv.appendChild(img);
 }
 
-// Function to play a sound
-function playSound(soundFileName) {
-  const audio = new Audio(`sounds/${soundFileName}`);
-  audio.play();
-}
-
-// Function for custom actions (like logging a message)
-function customAction(message) {
-  console.log(message);
-}
-
 // Export actions for modularity
 const actions = {
-  displayImage: displayImage,
-  playSound: playSound,
-  customAction: customAction
+  displayImage: displayImage
 };
 
 export { actions };
+

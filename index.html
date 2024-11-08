@@ -11,38 +11,25 @@
 <!-- Rules Section -->
 <div id="rulesSection">
   <h1>Find a solution to the ash killing parrot.</h1>
-  <p>We thought ash dieback and the emerald ash borer was bad. Now there is a new threat...the ash killing parrot (AKP)</p>
   <p>You are a researcher starting with £1,000,000. You can perform various actions to try and investigate the phenomenon</p>
-  <p>Doing stuff costs money. Hopefully you will figure out a solution before all the ash is dead (again).</p>
-
-  <!-- Button to start the game -->
   <button id="startGameButton">Start your research program</button>
 </div>
 
 <!-- Main Game Section (initially hidden) -->
 <div id="gameSection" style="display:none;">
   <h1>Bean Spending Game</h1>
-
-  <p id="beanCounter">You have <span id="beanCount">1,000,000</span> pounds left.</p>
-
-  <!-- Buttons to perform various actions -->
+  <p id="beanCounter">You have <span id="beanCount">1000000</span> pounds left.</p>
   <div id="buttonSection">
-    <button data-action="displayImage" data-param="Rplot54.png">Investigate heritability (spend 10 pounds)</button>
-    <button data-action="displayImage" data-param="Rplot55.png">Peform a GWAS (spend ten pounds)</button>
-    <button data-action="displayImage" data-param="bird.jpg">Investigate the pathogen (spend 10 pounds)</button>
-
-    <button data-action="customAction" data-param="Spend your money wisely...">Show a message from your team leader (Spend 10 pounds)</button>
+    <button data-action="displayImage" data-param="Rplot54.png">Investigate heritability</button>
   </div>
-
   <div id="output"></div>
-
   <button id="backToRulesButton">Back to Rules</button>
 </div>
 
 <!-- Import JS Modules -->
-<script src="js/actions.js" defer></script>
-<script src="js/displayImages.js" defer></script>
-<script src="js/main.js" defer></script>
+<script src="js/actions.js" type="module" defer></script>
+<script src="js/displayImages.js" type="module" defer></script>
+<script src="js/main.js" type="module" defer></script>
 
 </body>
 </html>
