@@ -51,29 +51,12 @@
   <button onclick="goBackToRules()">Back to Rules</button>
 </div>
 
-<script src="js/actions.js" type="module"></script>  <!-- Import actions for modularity -->
+<!-- Import JS Modules -->
+<script src="js/actions.js" type="module"></script>
 <script src="js/displayImages.js" type="module"></script>
 <script src="js/main.js" type="module"></script>
 
-
-<script type="module">
-  // Function to start the game (hide rules and show game section)
-  function startGame() {
-    document.getElementById('rulesSection').style.display = 'none';
-    document.getElementById('gameSection').style.display = 'block';
-  }
-
-  // Function to go back to the rules section
-  function goBackToRules() {
-    document.getElementById('rulesSection').style.display = 'block';
-    document.getElementById('gameSection').style.display = 'none';
-  }
-
-  // Attach event listeners to buttons
-  document.getElementById('startGameButton').addEventListener('click', startGame);
-  document.getElementById('goBackToRulesButton').addEventListener('click', goBackToRules);
-</script>
-
 </body>
 </html>
+
 
