@@ -1,41 +1,33 @@
 <!DOCTYPE html>
+<!-- This is how you do a comment in html -->
+
 <html lang="en">
+
+<!-- So this head section is used for creating the body of the script, I guess -->
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Display Data</title>
-  <style>
-   #output img {
-    max-width: 100%;
-    height: auto;
-   }
-   </style>
+  <title>Image display</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
 <h1>Display Data from a Text File</h1>
-<button id="dataButton">Data</button>
+
+<!-- div just divides things arbitrarily into sections -->
 <div id="output"></div>
+	<button data-image="Rplot64.png"><Show Image 1</button>
+	<button data-image="Rplot65.png"><Show Image 2</button>
+	<button data-image="Rplot66.png"><Show Image 3</button>
+</div>
 
-<script>
-  // Function to fetch and display the data from 'data.txt'
-  document.getElementById('dataButton').addEventListener('click', function() {
-  
-  document.getElementById('output').innerHTML = '';
+<div id="output"></div> <!-- This is where the images will appear on the page -->
 
-   //Create a new img element
-   const img = document.createElement('img')
-   img.src = 'Rplot66.png'
+<!-- So then it will execute the scripts here... -->
 
-   //Set alt text for accessibility
-   img.alt = 'Displayed Image'
-
-  
-   // Append the image to the output div
-   document.getElementById('output').appendChild(img);
-
-  });
-</script>
+<script src="js/displayImages.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 </html>

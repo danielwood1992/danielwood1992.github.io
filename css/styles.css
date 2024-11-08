@@ -1,0 +1,45 @@
+/* styles.css */
+
+/* General reset: remove default margin and padding for all elements*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  /* Ensures consistent box sizing across all elements */
+}
+
+/* Body styling: Set a clean and readable font and add padding around the page */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Style for the header (h1) */
+h1 {
+  margin-bottom: 20px;  /* Adds space below the header */
+}
+
+/* Button section: Add space between buttons */
+#buttonSection {
+  margin-bottom: 20px;  /* Space below the buttons */
+}
+
+/* Style for buttons: Add padding and set a cursor to indicate they are clickable */
+button {
+  margin: 5px;  /* Space between buttons */
+  padding: 10px 15px;  /* Space inside buttons */
+  font-size: 16px;  /* Set font size for buttons */
+  cursor: pointer;  /* Change cursor to indicate button is clickable */
+}
+
+/* Output div: Add space above the displayed image */
+#output {
+  margin-top: 20px;  /* Space above the image */
+}
+
+/* Class to make images responsive */
+.responsive-img {
+  max-width: 100%;  /* Make sure images do not overflow */
+  height: auto;  /* Maintain aspect ratio of images */
+  display: block;  /* Make the image a block element for centering */
+  margin: 0 auto;  /* Center the image horizontally */
+}
