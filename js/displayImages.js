@@ -55,4 +55,3 @@ document.getElementById('buttonSection').addEventListener('click', function(even
 
 // Initial setup: Update bean count on page load
 updateBeanCount();
-/
