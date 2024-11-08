@@ -1,5 +1,5 @@
 //Function to display an image
-fuction displayImage(imageFileName) {
+function displayImage(imageFileName) {
   const outputDiv = document.getElementById('output');
   outputDiv.innerHTML = '';  // Clear previous content
 
