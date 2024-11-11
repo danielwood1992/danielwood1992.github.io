@@ -10,9 +10,15 @@ function displayImage(imageFileName) {
   outputDiv.appendChild(img);
 }
 
+
+function customAction(message) {
+	console.log(message)
+}
+
 // Export actions for modularity
 const actions = {
   displayImage: displayImage
+  customAction: customAction
 };
 
 export { actions };

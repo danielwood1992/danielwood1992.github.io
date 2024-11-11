@@ -12,8 +12,11 @@
 <div id="rulesSection">
   <h1>Find a solution to the ash killing parrot.</h1>
   <p>The year is 2054. Having finally restored EAB and ADB resistant ash to the landscape...the ash killing parrot arrived.</p>
-  <p>You are a researcher starting with £1,000,000. You can perform various actions to try and investigate the phenomenon</p>
+  <p>You are a researcher starting with £1,000,000. You can perform various actions/experiments to try and investigate the phenomenon</p>
   <p>Can you find a solution before all the ash is dead (again)?</p>
+  <p>Note - this is currently a demo where I'm trying to figure out how to make the buttons/pictures/money system etc. work</p>
+  <p>Once I've got a hang of the basics (not done this before) it should be fairly easy to add a lot more actual scientific content</p>
+
 
   <button id="startGameButton">Start your research program</button>
 </div>
@@ -21,11 +24,12 @@
 <!-- Main Game Section (initially hidden) -->
 <div id="gameSection" style="display:none;">
   <h1>Find a solution to the ash killing parrot</h1>
+  <!-- So this gets you the number of beans you have -->
   <p id="beanCounter">You have <span id="beanCount">1000000</span> pounds left.</p>
   <div id="buttonSection">
-    <button data-action="displayImage" data-param="Rplot64.png">Generate a comforting graph</button>
-    <button data-action="displayImage" data-param="bird.jpg">Investigate the pathogen</button>
-    <button id=showMessageButton>Get a message from your supervisor</button>
+    <button data-action="displayImage" data-param="Rplot64.png">Do an experiment to generate a graph (£10)</button>
+    <button data-action="displayImage" data-param="bird.jpg">Investigate the pathogen (£10)</button>
+    <button data-action="customAction" data-param="You are doing a great job">Generate an encouraging message </button>
 
   </div>
   <div id="output"></div>
