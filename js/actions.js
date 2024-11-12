@@ -13,7 +13,7 @@ function displayImage(imageFileName) {
 
 function customAction(message) {
 	const messaegArea = document.getElementById('messageArea');
-	const outputDiv - document.getElementById('output');
+	const outputDiv = document.getElementById('output');
 	outputDiv.innerHTML = '';  // Clear previous content
 	messageArea.textContent = message; //Set the message text
 }
