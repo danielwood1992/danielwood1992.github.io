@@ -18,12 +18,6 @@ function goBackToRules() {
   document.getElementById('gameSection').style.display = 'none';
 }
 
-// Function to display the message
-  function showMessage() {
-    const messageArea = document.getElementById('messageArea');  // Get the element to display the message
-    messageArea.textContent = "Spend your money wisely...";  // Set the message text
-  }
-
 
 // Wait for the DOM to load
 document.addEventListener('DOMContentLoaded', function() {
