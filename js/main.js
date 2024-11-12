@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
   updateBeanCount();
   
   // Event listener for the "Show Message" button
-  document.getElementById('customAction').addEventListener('click', function() {
-    showMessage();  // Display the message when the button is clicked
-  });
+//  document.getElementById('customAction').addEventListener('click', function() {
+ //   showMessage();  // Display the message when the button is clicked
+//  });
 
 });
