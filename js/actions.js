@@ -12,7 +12,8 @@ function displayImage(imageFileName) {
 
 
 function customAction(message) {
-	console.log(message)
+	const messaegArea = document.getElementByID('messageArea');
+	messageArea.textContent = message; //Set the message text
 }
 
 // Export actions for modularity

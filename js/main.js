@@ -18,6 +18,13 @@ function goBackToRules() {
   document.getElementById('gameSection').style.display = 'none';
 }
 
+// Function to display the message
+  function showMessage() {
+    const messageArea = document.getElementById('messageArea');  // Get the element to display the message
+    messageArea.textContent = "Spend your money wisely...";  // Set the message text
+  }
+
+
 // Wait for the DOM to load
 document.addEventListener('DOMContentLoaded', function() {
   // Start Game button event listener
@@ -35,14 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initial update of bean count
   updateBeanCount();
   
-  // Function to display the message
-  function showMessage() {
-    const messageArea = document.getElementById('messageArea');  // Get the element to display the message
-    messageArea.textContent = "Spend your money wisely...";  // Set the message text
-  }
-
   // Event listener for the "Show Message" button
-  document.getElementById('showMessageButton').addEventListener('click', function() {
+  document.getElementById('customAction').addEventListener('click', function() {
     showMessage();  // Display the message when the button is clicked
   });
 
