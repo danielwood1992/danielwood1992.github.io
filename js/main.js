@@ -41,4 +41,4 @@ document.addEventListener('DOMContentLoaded', function() {
  //   showMessage();  // Display the message when the button is clicked
 //  });
 
-});
+g);

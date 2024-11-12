@@ -8,8 +8,8 @@ function updateBeanCount() {
 }
 
 // Updated `spendBeans` to use the `actions` object to call both displayImage and customAction
-function spendBeans(actionType, actionParam) {
-  if (beans <= 0) {
+function spendBeans(actionType, actionParam, actionCost) {
+  if (beans <= actionCost) {
     disableButtons();
     return;
   }
@@ -17,7 +17,7 @@ function spendBeans(actionType, actionParam) {
   // Check if actionType exists in `actions`, then call it with `actionParam`
   if (actions[actionType]) {
     actions[actionType](actionParam);  // <--- Unified way to call any action in `actions`
-    beans -= 10000;                       // Deduct beans for each action performed
+    beans -= actionCost;                       // Deduct beans for each action performed
     updateBeanCount();                 // Update displayed bean count
   } else {
     console.error('Action type not found:', actionType);
@@ -34,9 +34,9 @@ document.getElementById('buttonSection').addEventListener('click', function(even
   const button = event.target;
   const actionType = button.getAttribute('data-action');
   const actionParam = button.getAttribute('data-param');
-
+  const actionCost = parseInt(button.getAttribute('data-cost'), 10); //get the cost
   if (actionType) {
-    spendBeans(actionType, actionParam);  // Pass `actionType` and `actionParam` to spendBeans
+    spendBeans(actionType, actionParam, actionCost);  // Pass `actionType` and `actionParam` to spendBeans
   }
 });
 

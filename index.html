@@ -29,10 +29,10 @@
   <!-- So this gets you the number of beans you have -->
   <p id="beanCounter">You have <span id="beanCount">1000000</span> pounds left.</p>
   <div id="buttonSection">
-    <button data-action="displayImage" data-param="Rplot64.png">Do an experiment to generate a graph (£10,000)</button>
-    <button data-action="displayImage" data-param="bird.jpg">Investigate the pathogen (£10,000)</button>
+    <button data-action="displayImage" data-param="Rplot64.png" data-cost="10000">Do an experiment to generate a graph (£10,000)</button>
+    <button data-action="displayImage" data-param="bird.jpg" data-cost="2000">Investigate the pathogen (£2,000)</button>
    <!-- So this doesn't seem to be playing ball with the customAction ID -->
-    <button data-action="customAction" data-param="You are doing a great job">Generate an encouraging message (£10,000) </button>
+    <button data-action="customAction" data-param="You are doing a great job" data-cost="100">Generate an encouraging message (£100) </button>
 
   </div>
   <div id="output"></div>
@@ -44,7 +44,7 @@
 
 <!-- Import JS Modules -->
 <script src="js/actions.js" type="module" defer></script>
-<script src="js/displayImages.js" type="module" defer></script>
+<script src="js/spendBeans.js" type="module" defer></script>
 <script src="js/main.js" type="module" defer></script>
 
 </body>
