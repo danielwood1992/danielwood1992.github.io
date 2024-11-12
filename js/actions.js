@@ -16,8 +16,9 @@ function customAction(message) {
 }
 
 // Export actions for modularity
+// Requires a comma separated list
 const actions = {
-  displayImage: displayImage
+  displayImage: displayImage,
   customAction: customAction
 };
 
